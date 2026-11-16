@@ -1,6 +1,6 @@
 {
   "name": "voodoo-puzzle-skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Five mobile puzzle workflows for idea generation, concept validation, game creation, build review, and updates.",
   "homepage": "https://github.com/Fahad-NinjaTurtle/voodoo-game-skill",
   "skills": "./skills/",

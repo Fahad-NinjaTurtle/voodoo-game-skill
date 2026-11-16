@@ -19,9 +19,9 @@ Deliver a full game plan with these sections.
 
 1. Concept, audience, one-line pitch and **Inspiration** with the new decision.
 2. Controls, core loop, board/state, action rules, legal and illegal feedback, win/loss and revive. Include a reproducible example with two different solutions and one recoverable error.
-3. L1–20 specifications and sawtooth curve, seeded variation and verification, path to V2/L50 and 1,000-level QA. Define progression metrics and the earn/spend/failure loop.
-4. Palette roles, shape language, board hierarchy, asset briefs and references, 2D/3D rationale, plus actionable motion/audio/haptic cues. Cover first-glance and grayscale checks.
-5. First 3–5-second hook, sample win/lose shots, five CPI angles for V1, instrumentation and playtest criteria.
+3. L1–20 specifications with level personalities, fail-safe tutorials, hard/easy pairs and the loop back from L20 to about L6. Include seeded variation, a path to V2/L50 and 1,000-level QA, progression metrics and revive economy.
+4. Portrait gameplay and panel flow, including Win, Game Over and a Main Menu planned for a later version. Specify each panel's content, actions and destination. Include palette roles, board hierarchy, asset references, motion/audio/haptics and readability checks.
+5. First 3–5-second hook, sample win/lose states for the pitch, five CPI angles for V1, and where each ad moment appears in L1–3. Include instrumentation and playtest criteria.
 6. V0 → V1 → V2 deliverables, dependencies, scope decisions and acceptance checks. Order work by risk and prioritize touch, feedback and the core loop.
 
-If the agreed scope includes a build, follow the project's entry points and implement that playable scope. Use the existing stack, or a small self-contained HTML5 V0 when agreed and no stack is prescribed. Run available checks and exercise the full input → win/fail → retry/revive loop with the selected seeds. For a complete V1, verify all 20 level definitions, the fail-safe opening and level-to-level progression. Hand over the runnable path, controls and verification gaps. A written plan is the deliverable when plan-only is selected.
+If the agreed scope includes a build, follow the project's entry points and implement that playable scope. Use the existing stack, or a small self-contained HTML5 V0 when agreed and no stack is prescribed. Verify portrait behavior and the input → result panel → next level or retry/revive flow. For a complete V1, run the V1 checklist in the test reference. Hand over the runnable path, controls and verification gaps. A written plan is the deliverable when plan-only is selected.

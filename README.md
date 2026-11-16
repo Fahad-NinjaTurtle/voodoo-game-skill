@@ -19,7 +19,7 @@ codex plugin marketplace add Fahad-NinjaTurtle/voodoo-game-skill
 codex plugin add voodoo-puzzle-skills@voodoo-game-skill
 ```
 
-Start a fresh session and type `$` to find the workflows. [Codex skill invocation](https://learn.chatgpt.com/docs/build-skills)
+Start a fresh session. In Codex desktop, type `/` and search for `voodoo`, or type `$voodoo-create` to select a workflow directly. In the Codex CLI, use `/skills` to browse. [Desktop slash commands](https://learn.chatgpt.com/docs/app/slash-commands) · [Codex skill invocation](https://learn.chatgpt.com/docs/build-skills)
 
 ### Cursor
 
@@ -72,6 +72,10 @@ Copy-Item -Path '../voodoo-game-skill/skills/voodoo-*' -Destination '.agents/ski
 
 You can also extract the standalone skills ZIP and copy the five folders to the same destination. Keep each `references/` folder beside its `SKILL.md`. [Download the standalone skills ZIP](downloads/voodoo-agent-skills.zip?raw=true)
 
+### If the skills are missing from the menu
+
+After cloning or downloading the repository, complete the installation for your app. A project install appears in sessions opened in that project. Use `--global` with your app's `npx` command to make the skills available across projects. If you added the native marketplace, finish installing and enabling **voodoo-puzzle-skills** in the app. Then open a fresh session and search for `voodoo`.
+
 ## Pick a workflow
 
 - [`/voodoo-idea-generation`](skills/voodoo-idea-generation/SKILL.md) finds original ideas grounded in real games or toys. A starting example is optional.
@@ -83,6 +87,8 @@ You can also extract the standalone skills ZIP and copy the five folders to the 
 Try `Use voodoo-idea-generation. I want a one-finger mobile puzzle and I have no starting reference.` Expect a short intake before any ideas. For a game audit, try `Use voodoo-validate to review levels 1–5 of my Unity V1 for onboarding and visual readability.` Expect a request for the relevant evidence.
 
 The skill folders contain Markdown and require no runtime dependencies. Playable prototypes, edits, browsing, and device checks depend on the tools available in your AI app and the scope you agree to.
+
+Games stay in portrait. V1 opens straight into a 20-level puzzle with Win and Game Over panels. Levels 1–3 teach the ad's gameplay safely, and L4 is the first level that can end in a loss. A full game plan includes the Main Menu for a later version.
 
 ## Repository layout
 
