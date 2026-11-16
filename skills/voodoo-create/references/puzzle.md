@@ -1,0 +1,26 @@
+# Puzzle design gates
+
+Apply the user's explicit brief and *Game Ideation Guide (1).pdf*, pp. 1–5, to the idea and mechanics. Use the [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS) for execution and publishing-test guidance. Its calendar, status section and team logistics are outside scope. For art and game feel use the [Execution guide](https://app.notion.com/p/Execution-Art-Gamefeel-Animations-bc6fe94c74608317a6e001042f76d2bb). The paint-and-pixel concept in the brief illustrates pitch sections. Its timer, mechanics, audience details and boosters belong to that example.
+
+## Inspiration and differentiation
+
+- Start from a real game, board game or toy outside the current mobile top 100. Look at PC/Steam, web, indie and overlooked mobile games, physical games, toys and puzzles. A story or AI image can inform visual treatment after the real mechanical source is established. Use the charts for a clone check and high-quality games for execution benchmarks. Compare the closest substitutes by action, state change, decision and goal. A reskin or a simple combination of two existing games fails the originality check.
+- Fill **Inspiration** in the Voodoo design template with the named source, link or rule reference, the mechanic or pleasure observed, what survives the adaptation, and the new decision or experience. Record market/store, date and scope of the closest-game search where available. Leave current-chart status or originality claims unverified when the evidence is missing.
+- Screen for a familiar, broadly appealing premise and a distinctive action/payoff. Women 35+ seeking stress relief and achievement are a playbook audience reference. Preserve broad, gender-neutral appeal. Prefer one coherent mechanic and a tactile experience. Exploration directions include expansion, escape, and drawing or path layout with forgiving inputs.
+
+## What qualifies as a puzzle
+
+- Solo, decision-led, with forgiving hit areas and enough time to think. Precise aiming, timed taps, trick shots, twitch input or a choice deadline of roughly three seconds fail. A level-wide timer is optional and needs testing for thoughtful play, early forgiveness and a fair revive.
+- Give direct control over outcomes, visible constraints and an immediate response to each action, including invalid inputs. For a simulation, resolve meaningful state during play and return control at each decision. Reject full-board setup followed by a passive reveal. Use predictable, previewable outcomes for physics when relevant. Same state, seed and input should replay the same outcome.
+- Prove strategic freedom on the same representative board. Show at least two meaningfully different winning paths, the tradeoff between them and an understandable mistake that can still recover. Trivial permutations of identical moves are weak evidence. Make progress visible and preserve room for a combo, chain reaction, risk/reward choice or other payoff. Flexible goals such as collecting a quota support recovery without requiring a perfect sequence.
+- Make the goal, legal moves and failure pressure visible. Prefer teaching through action. Screen out strict single-solution puzzles, color sorting, conventional color matching, dock mechanics, hidden critical information, clutter that invites guessing, and rules that require heavy reading. A loop with no meaningful loss or no satisfying repeat payoff needs rework.
+
+## Progression and hook
+
+- Start with 3–5 tutorial levels designed to get everyone through. Keep 1–3 fail-safe, show the ad's core action and payoff early, and teach the loss rule safely. Keep early play forgiving and design losses to cluster in the last fifth of meaningful level progress. Tie a continue to the exhausted resource and preserve progress.
+- Tune in waves of about five levels. Build toward a marked hard level, then deliver a short, rewarding easy one. Show 20 complete V1 levels on the same rules. Plan 50 complete levels for V2 and explain how a bounded level grammar and QA could support 1,000. Add small repeat variation through seeded, constrained board setup or order. Protect solvability and difficulty under retries.
+- Marketability gate. In the first 3–5 seconds of raw footage, show a distinctive player action and its immediate outcome. Make the goal and failure pressure legible enough for a fresh viewer to infer how the player wins or loses. Show actual win and fail states in the pitch. Test the opening with fresh viewers. A storyboard is a hypothesis until viewers see an actual clip. The clip window measures comprehension and interest.
+
+## Review outcome
+
+Give one verdict for the agreed scope: **Advance**, **Rework**, **Drop**, or **Evidence needed** when a decision requires critical evidence you lack. Use **Pass**, **Fail**, **Unverified** or **Out of scope** per check, with evidence and the smallest next test or fix. A failed gate prevents an unqualified Advance. Track the applicable gates for originality, broad appeal, hook, visible conditions, flexible wins, agency, direct control, feedback, depth, tutorial, late loss/revive, V1/V2 scope, controlled randomness, 1,000-level plausibility and anti-patterns. Treat a missing V0 as a build milestone at idea stage and verify the AI-assisted web V0 when assessing completed prototype milestones.
