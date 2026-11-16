@@ -4,15 +4,51 @@ Five portable Agent Skills for finding, validating, building, and improving mobi
 
 ## Download and install
 
-### Install from GitHub
+Choose your app. The `npx` commands require Node.js and Git. Run the command for your app from your game project. Add `--global` to install the standalone skills for all your projects. To install one workflow, replace `"*"` with a name such as `voodoo-create`. [Skills CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md#skills-add)
 
-With Node.js and Git installed, run this from your game project to download and install all five skills for Codex, Cursor, and Claude Code. Keep only the agent names you use after `--agent`. [Skills CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md#skills-add)
+### Codex
 
 ```sh
-npx skills add Fahad-NinjaTurtle/voodoo-game-skill --skill "*" --agent codex cursor claude-code --copy
+npx skills add Fahad-NinjaTurtle/voodoo-game-skill --skill "*" --agent codex --copy
 ```
 
-To install for all your projects, append `--global`. To install one workflow, replace `"*"` with its name, such as `voodoo-create`. Run `npx skills list` from your project to check what was installed, or `npx skills list --global` for a global install. Start a fresh agent session to use the skills.
+To install the native plugin instead, use a Codex CLI version with `codex plugin add`. [Codex plugin packaging](https://developers.openai.com/plugins/build/plugins#add-a-marketplace-from-the-cli)
+
+```sh
+codex plugin marketplace add Fahad-NinjaTurtle/voodoo-game-skill
+codex plugin add voodoo-puzzle-skills@voodoo-game-skill
+```
+
+Start a fresh session and type `$` to find the workflows. [Codex skill invocation](https://learn.chatgpt.com/docs/build-skills)
+
+### Cursor
+
+```sh
+npx skills add Fahad-NinjaTurtle/voodoo-game-skill --skill "*" --agent cursor --copy
+```
+
+For a native plugin install, open **Customize**, choose **From GitHub Repository**, enter `Fahad-NinjaTurtle/voodoo-game-skill`, and install **voodoo-puzzle-skills** from the imported marketplace. Type `/` in Agent chat to find the workflows. [Cursor repository install](https://cursor.com/docs/skills#installing-skills-from-a-repository)
+
+### Claude Code
+
+```sh
+claude plugin marketplace add Fahad-NinjaTurtle/voodoo-game-skill
+claude plugin install voodoo-puzzle-skills@voodoo-game-skill
+```
+
+In Claude Code, try `/voodoo-puzzle-skills:voodoo-create`. To use the standalone names such as `/voodoo-create`, install the skills with the command below instead. [Claude Code plugin install](https://code.claude.com/docs/en/discover-plugins)
+
+```sh
+npx skills add Fahad-NinjaTurtle/voodoo-game-skill --skill "*" --agent claude-code --copy
+```
+
+### Claude web and desktop
+
+Upload the ZIP under **Customize → Skills → + → Create skill → Upload a skill** and enable `voodoo-puzzle`. In chat, say `Use my voodoo-puzzle skill, workflow voodoo-create.` Substitute the workflow you want. [Download the Claude upload ZIP](downloads/voodoo-puzzle-claude.zip?raw=true) · [Claude Help Center](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
+
+### Other AI chats
+
+Attach or paste the standalone prompt into a new chat and ask the app to follow the playbook for your chosen workflow. Apps that support Agent Skills can also use the five folders in their documented skill directory. [Download the standalone prompt](downloads/voodoo-puzzle-prompt.md?raw=true) · [Agent Skills specification](https://agentskills.io/specification)
 
 ### Download without Node.js
 
@@ -34,19 +70,7 @@ New-Item -ItemType Directory -Force -Path '.agents/skills' | Out-Null
 Copy-Item -Path '../voodoo-game-skill/skills/voodoo-*' -Destination '.agents/skills/' -Recurse -Force
 ```
 
-The checkout also contains the upload ZIPs in `voodoo-game-skill/downloads/`. You can download individual packages below.
-
-- **Codex, Cursor, or Claude Code**. [Download the five Agent Skills](downloads/voodoo-agent-skills.zip?raw=true) and extract them, or use the folders under [`skills/`](skills/). Copy the five folders into your app's skill directory and keep the `references/` folders alongside each `SKILL.md`.
-- **Claude web or desktop**. [Download the Claude upload ZIP](downloads/voodoo-puzzle-claude.zip?raw=true). Under **Customize → Skills → + → Create skill → Upload a skill**, upload the ZIP and enable `voodoo-puzzle`. In chat, say `Use my voodoo-puzzle skill, workflow voodoo-create.` Substitute the workflow you want. [Claude Help Center](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
-- **Other AI chats**. [Download the standalone Markdown prompt](downloads/voodoo-puzzle-prompt.md?raw=true). Attach or paste it into a new chat and ask it to follow the playbook for your chosen workflow. Other apps that implement Agent Skills can use the five folders in their documented skill directory. [Agent Skills specification](https://agentskills.io/specification)
-
-## Where to put the five folders
-
-- **Codex**. Use `.agents/skills/` in a project or `~/.agents/skills/` for personal use. Type `$` and select the skill by name, for example `$voodoo-create`. [OpenAI installation](https://developers.openai.com/api/reference/cli), [OpenAI invocation](https://learn.chatgpt.com/docs/build-skills)
-- **Cursor**. Use `.cursor/skills/` in a project or `~/.cursor/skills/` for personal use. Cursor also reads `.agents/skills/`. Type `/` in Agent chat and select the skill. [Cursor documentation](https://cursor.com/docs/skills)
-- **Claude Code**. Use `.claude/skills/` in a project or `~/.claude/skills/` for personal use. Type the slash command. [Claude Code documentation](https://code.claude.com/docs/en/skills)
-
-`~` means your user folder (`%USERPROFILE%` on Windows). A project install in Codex should contain `.agents/skills/voodoo-create/SKILL.md`. If a skill does not appear after copying it, open a fresh session.
+You can also extract the standalone skills ZIP and copy the five folders to the same destination. Keep each `references/` folder beside its `SKILL.md`. [Download the standalone skills ZIP](downloads/voodoo-agent-skills.zip?raw=true)
 
 ## Pick a workflow
 
@@ -59,6 +83,13 @@ The checkout also contains the upload ZIPs in `voodoo-game-skill/downloads/`. Yo
 Try `Use voodoo-idea-generation. I want a one-finger mobile puzzle and I have no starting reference.` Expect a short intake before any ideas. For a game audit, try `Use voodoo-validate to review levels 1–5 of my Unity V1 for onboarding and visual readability.` Expect a request for the relevant evidence.
 
 The skill folders contain Markdown and require no runtime dependencies. Playable prototypes, edits, browsing, and device checks depend on the tools available in your AI app and the scope you agree to.
+
+## Repository layout
+
+- `skills/` holds the five workflows and their references. All three native plugins load these same files.
+- `.agents/plugins/marketplace.json` defines the Codex marketplace. `.codex-plugin/plugin.json` declares the plugin it offers.
+- `.claude-plugin/` and `.cursor-plugin/` contain the manifests and marketplaces for those apps.
+- `downloads/` holds the standalone skills ZIP, the Claude upload ZIP, and the chat prompt.
 
 ## Source guidance
 

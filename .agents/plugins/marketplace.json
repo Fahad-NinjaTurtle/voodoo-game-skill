@@ -1,0 +1,20 @@
+{
+  "name": "voodoo-game-skill",
+  "interface": {
+    "displayName": "Voodoo Puzzle Skills"
+  },
+  "plugins": [
+    {
+      "name": "voodoo-puzzle-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
