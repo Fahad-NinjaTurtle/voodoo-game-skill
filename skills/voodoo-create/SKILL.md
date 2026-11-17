@@ -1,6 +1,6 @@
 ---
 name: voodoo-create
-description: Turn a chosen Voodoo-style puzzle idea into a full game plan and, when scoped, build its playable prototype or V1. Use for greenfield puzzle design and creation.
+description: Turn a chosen Voodoo-style puzzle idea into a full game plan and a finished playable prototype. Use for greenfield puzzle design and creation.
 ---
 
 ## Before any work
@@ -11,17 +11,16 @@ After intake, load only the references named for the chosen workflow. Source mat
 
 # Create a game from an idea
 
-Intake options: ask which idea or pitch to take forward, which scope to deliver (full game plan, plan plus playable V0, or a scoped V1 build), and the target engine/device or production constraints. If the target is a plan, treat technology choices as plan decisions. Confirm when the brief already contains all inputs.
+Intake options include the chosen idea, target engine/device and required assets. A request to create the game includes a plan and one finished playable prototype. Honor an explicitly requested plan-only scope. Confirm any material decision that the brief leaves open.
 
-After intake, read [Puzzle design gates](references/puzzle.md), [Levels, fairness and economy](references/levels.md), [Mobile art and game feel](references/art.md), and [Prototype, creative and test plan](references/testing.md). Screen for blockers, identify evidence gaps and propose scoped fixes for the chosen concept. If a hard gate needs a fundamentally different concept, surface the decision before rewriting the premise.
+After intake, read [Puzzle design gates](references/puzzle.md), [Levels, fairness and economy](references/levels.md), [Mobile art and game feel](references/art.md), and [Prototype acceptance and loss logging](references/testing.md). Screen for blockers, identify evidence gaps and propose scoped fixes for the chosen concept. If a hard gate needs a fundamentally different concept, surface the decision before rewriting the premise.
 
 Deliver a full game plan with these sections.
 
 1. Concept, audience, one-line pitch and **Inspiration** with the new decision.
 2. Controls, core loop, board/state, action rules, legal and illegal feedback, win/loss and revive. Include a reproducible example with two different solutions and one recoverable error.
-3. L1–20 specifications with level personalities, fail-safe tutorials, hard/easy pairs and the loop back from L20 to about L6. Include seeded variation, a path to V2/L50 and 1,000-level QA, progression metrics and revive economy.
-4. Portrait gameplay and panel flow, including Win, Game Over and a Main Menu planned for a later version. Specify each panel's content, actions and destination. Include palette roles, board hierarchy, asset references, motion/audio/haptics and readability checks.
-5. First 3–5-second hook, sample win/lose states for the pitch, five CPI angles for V1, and where each ad moment appears in L1–3. Include instrumentation and playtest criteria.
-6. V0 → V1 → V2 deliverables, dependencies, scope decisions and acceptance checks. Order work by risk and prioritize touch, feedback and the core loop.
+3. L1–20 specifications with level personalities, restricted tutorial steps and animated hand cues, hard/easy pairs and the loop back from L20 to about L6. Include seeded variation and the revive economy.
+4. Portrait Main Menu, gameplay, Win and Game Over flow. Specify each panel's content, actions and destination. Include palette, asset references and particles, screen shake, sound and phone vibration per action.
+5. Objective-progress logging at each loss, the 900-coin revive behavior, and acceptance checks for the complete player flow. Exclude all ad code, stubs, SDKs, placements and ad-gated actions.
 
-If the agreed scope includes a build, follow the project's entry points and implement that playable scope. Use the existing stack, or a small self-contained HTML5 V0 when agreed and no stack is prescribed. Verify portrait behavior and the input → result panel → next level or retry/revive flow. For a complete V1, run the V1 checklist in the test reference. Hand over the runnable path, controls and verification gaps. A written plan is the deliverable when plan-only is selected.
+For a build, use the existing stack and its normal entry points. When an agreed browser build has no stack, use HTML5 and keep the playable viewport in portrait. Run the acceptance checklist, hand over a runnable path and identify remaining device checks. For a plan-only request, deliver the plan with the same acceptance criteria.

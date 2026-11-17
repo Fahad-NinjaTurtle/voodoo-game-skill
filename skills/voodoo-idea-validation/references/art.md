@@ -11,20 +11,21 @@ Use [Execution: Art, Gamefeel & Animations](https://app.notion.com/p/Execution-A
 
 ## Portrait layout and panels
 
-- Design gameplay, tutorial, result panels and any later menu for portrait only. Lock native builds to portrait and disable landscape autorotation. Where a web build cannot lock device orientation, keep the playable viewport in a centered portrait frame on wide screens. Check short and tall phones, safe areas and reachable primary controls.
-- Win panel. Present the result and earned coins once, with a clear Next Level action. Keep the celebration brief. Advance directly into the next board.
-- Game Over panel. From L4 onward, show the outcome, remaining goal and how close the player was. Present Retry and the eligible 900-coin revive with its exact grant. Make insufficient coins clear. Use the same visual system as gameplay and pause board input while a result panel is open.
-- Main Menu panel. Include it in a full game plan for a later version. Give Play or Continue clear priority and make it lead to the right level. V1 launches into gameplay and continues through the Win panel.
+- Design every screen for portrait. Lock native builds to portrait and disable landscape autorotation. Where a web build cannot lock device orientation, keep the playable viewport in a centered portrait frame on wide screens. Check short and tall phones, safe areas and reachable primary controls.
+- Main Menu. Open here on launch. Give Play a clear route to L1 for new players and Continue a route to the player's saved progression. Keep these controls distinct from the game board.
+- Win. Show the result and coins earned. Credit the reward once. Next Level advances directly into the next board, including the loop after L20. Keep the celebration brief.
+- Game Over. From L4 onward, show the progress reached and the remaining goal. Offer Retry and, when eligible, a 900-coin revive with its exact grant. Explain an insufficient balance. Keep board input blocked while a result panel is open.
+- Tutorial hand. Animate a point and tap pulse for taps, or trace the actual path for a drag or swipe. Anchor the hand to the current target in portrait layouts. Keep it clear of the main action and let touches pass through it. Update or hide it when the step completes or the player leaves the tutorial.
 
 ## Feedback spec
 
-For each critical event define cue, start/travel/settle, priority, audio/haptic and what the board communicates. Include select, move, place, illegal or blocked input, score or goal progress, combo or payoff, win, near-loss and revive.
+Specify particles, screen shake, sound and phone vibration for each discrete gameplay action. Include selection, move, placement, blocked input, goal progress, combos and result actions. Give each action a visible response and a short sound and haptic cue on supported devices. Scale particles and screen shake to the event. Blocked or small actions use subtle cues and larger successes earn stronger effects. Avoid retriggering cues on every frame of a hold or drag. Keep the board readable and respect mute, haptics and reduced-motion settings where available.
 
 1. Start visible response on touch. Match movement to the gesture, and give an invalid move a brief rejection cue.
 2. Give each success a readable payoff. Scale move, success and combo with distinct intensity. Repeated events should still feel satisfying.
 3. Let nearby objects or the environment respond when it reinforces cause and effect.
 4. Use contrast, highlights, depth and clear affordances to guide the next choice.
-5. Specify short input audio and differentiated haptics on supported devices, with stronger cues for important actions and a rising pitch for a streak. Check on a phone with audio and haptics enabled and muted.
+5. Use a rising pitch for streaks when it fits the game. Check that the sound and vibration patterns are distinct on a real phone.
 6. Reinforce each result with the corresponding panel, motion and audio cue.
 
 Animate purposeful starts, travel and stops with easing, selective overshoot and settling. Use brisk small moves and greater weight for larger events. Align particles with the action's direction and reward scale. Keep the next playable state visible and responsive. Inspect phone-size screenshots, grayscale and a frame-by-frame clip. Compare a raw iteration and a polished one with the same rules. Identify the top three gaps and prioritize the feedback the player experiences every move.

@@ -79,16 +79,16 @@ After cloning or downloading the repository, complete the installation for your 
 ## Pick a workflow
 
 - [`/voodoo-idea-generation`](skills/voodoo-idea-generation/SKILL.md) finds original ideas grounded in real games or toys. A starting example is optional.
-- [`/voodoo-idea-validation`](skills/voodoo-idea-validation/SKILL.md) assesses a concept and recommends a small prototype test.
-- [`/voodoo-create`](skills/voodoo-create/SKILL.md) turns a chosen idea into a full game plan and can build the agreed playable scope.
+- [`/voodoo-idea-validation`](skills/voodoo-idea-validation/SKILL.md) assesses a concept and recommends a test for its core mechanic.
+- [`/voodoo-create`](skills/voodoo-create/SKILL.md) turns a chosen idea into a full game plan and one finished playable prototype.
 - [`/voodoo-validate`](skills/voodoo-validate/SKILL.md) audits a build, clip, repository, or test data for the criteria you select.
 - [`/voodoo-update`](skills/voodoo-update/SKILL.md) plans or implements focused changes to an existing game.
 
-Try `Use voodoo-idea-generation. I want a one-finger mobile puzzle and I have no starting reference.` Expect a short intake before any ideas. For a game audit, try `Use voodoo-validate to review levels 1–5 of my Unity V1 for onboarding and visual readability.` Expect a request for the relevant evidence.
+Try `Use voodoo-idea-generation. I want a one-finger mobile puzzle and I have no starting reference.` Expect a short intake before any ideas. For a game audit, try `Use voodoo-validate to review levels 1–5 of my Unity prototype for onboarding and visual readability.` Expect a request for the relevant evidence.
 
 The skill folders contain Markdown and require no runtime dependencies. Playable prototypes, edits, browsing, and device checks depend on the tools available in your AI app and the scope you agree to.
 
-Games stay in portrait. V1 opens straight into a 20-level puzzle with Win and Game Over panels. Levels 1–3 teach the ad's gameplay safely, and L4 is the first level that can end in a loss. A full game plan includes the Main Menu for a later version.
+The playable prototype stays in portrait and includes 20 levels, a Main Menu, and dedicated Win and Game Over panels. An animated hand guides restricted moves in levels 1–3. The first loss can occur at L4. Each action gets particles, screen shake, sound and phone vibration, with effects scaled to the action. A loss records how close the player got. Revive costs 900 coins. The prototype contains zero in-game ads.
 
 ## Repository layout
 
@@ -99,4 +99,4 @@ Games stay in portrait. V1 opens straight into a 20-level puzzle with Win and Ga
 
 ## Source guidance
 
-The references draw on Voodoo's *Game Ideation Guidelines and Checklist*, the [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS), and [Execution: Art, Gamefeel & Animations](https://app.notion.com/p/Execution-Art-Gamefeel-Animations-bc6fe94c74608317a6e001042f76d2bb). The skills cover decisions and forgiving controls, varied solutions, a 20-level core, late failure and fair revives, the 3–5 second ad hook, and readable art and motion.
+The references draw on Voodoo's *Game Ideation Guidelines and Checklist*, the [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS), and [Execution: Art, Gamefeel & Animations](https://app.notion.com/p/Execution-Art-Gamefeel-Animations-bc6fe94c74608317a6e001042f76d2bb). They cover decisions, forgiving controls, varied solutions, a 20-level core, late failure and readable game feedback.

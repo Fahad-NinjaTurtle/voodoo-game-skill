@@ -24,13 +24,13 @@ Use the requested workflow. Accept mode names with or without a `/` or `$` prefi
 
 Intake options: ask whether to start from scratch or use an optional example, toy, game or mechanic. Ask what player appeal, prototype scope or mechanic constraints matter most. One example is enough for a seed. A visual example can inform execution after finding a real mechanical origin.
 
-If the brief also requests a playable, clarify in the same batch whether to build it in this run and who picks the candidate. A prototype constraint by itself can guide the shortlist.
+If the brief also requests a playable, clarify in the same batch whether to build it in this run, who picks the candidate, and the engine or device if it affects the work. A prototype constraint by itself can guide the shortlist.
 
 After intake, read [Puzzle design gates](#puzzle). Use real sources outside the current mobile top 100 and, where browsing is available, verify what they do and look for near copies. Extract the rewarding interaction and simplify it for touch. Explore distinct decisions instead of changing the skin. Default to three candidates and one recommendation.
 
-For each candidate give a one-line pitch, filled **Inspiration**, gesture → consequence → next choice, goal and resource pressure, near-loss and revive, first 3–5 seconds of an ad and its matching moment in L1–3, visual metaphor, core-only level variation and biggest gate risk. Include a simple portrait board sketch or state sequence for the strongest idea showing two choices and the lose condition. Prefer the candidate with a credible small V0 and say what could disprove it fastest. Use [Mobile art and game feel](#art) when asked for an art direction, shot or mockup.
+For each candidate give a one-line pitch, filled **Inspiration**, gesture → consequence → next choice, a visible payoff, goal and resource pressure, a late-loss moment and coin revive, level variation and the biggest risk. Include a portrait board sketch or state sequence for the strongest idea. Show two choices, a guided tutorial action, the lose condition and a measurable objective-progress metric. Describe the particles, shake, sound and vibration that accompany the main action. Use [Mobile art and game feel](#art) when asked for art direction, footage or a mockup.
 
-When this run includes an agreed playable and the user selected the idea or delegated selection, load [Prototype, creative and test plan](#testing) and the art reference after shortlisting. Build the agreed V0 loop in portrait with readable result panels, check win/fail/retry and deliver its runnable location. Use `/voodoo-create` for a separate full game plan or production build.
+When this run includes a playable prototype and the user selected the idea or delegated selection, load [Levels, fairness and economy](#levels), [Prototype acceptance and loss logging](#testing), and the art reference after shortlisting. Build the finished prototype and verify the same acceptance criteria as `/voodoo-create`. Use `/voodoo-create` for a separate request to plan or build the chosen game.
 
 ## voodoo-idea-validation
 
@@ -38,36 +38,35 @@ When this run includes an agreed playable and the user selected the idea or dele
 
 Intake options: ask for a sketch or one-line concept, what the player does and how that action changes the board, the proposed win/loss rules or what evidence already exists. If useful, ask whether the decision is about pitching, prototyping or choosing between concepts.
 
-After intake, read [Puzzle design gates](#puzzle). Check every idea gate against the brief, evidence and applicable stage. On a sample board, test whether the current rules support two materially different winning paths, a late failure and a continue that preserves progress. If the rules prevent these outcomes, show the counterexample. Mark missing rules or evidence as unverified. Label any changed board or rule as a proposed fix. Compare the decision loop with the closest games. Check the first 3–5 seconds of the proposed ad hook and map its gameplay to fail-safe L1–3. Use [Mobile art and game feel](#art) for portrait layout and panel details, and [Levels, fairness and economy](#levels) for a detailed progression or revive check.
+After intake, read [Puzzle design gates](#puzzle). Check every applicable idea gate against the brief and evidence. On a sample board, test whether the current rules support two materially different winning paths, a late failure with measurable progress and a 900-coin continue that preserves progress. If the rules prevent these outcomes, show the counterexample. Mark missing rules or evidence as unverified. Label any changed board or rule as a proposed fix. Compare the decision loop with the closest games. Check the 3–5-second gameplay hook and how restricted tutorial steps teach it. Use [Mobile art and game feel](#art) for portrait layout and panels and [Levels, fairness and economy](#levels) for progression and revive details.
 
-Deliver the verdict, evidence per gate, the highest-impact changes and the smallest falsifiable V0 test. Include a corrected **Inspiration** entry if enough source evidence exists. A promised feature or an unseen playtest stays unverified. Keep this a concept assessment. Route a request to inspect a playable to `/voodoo-validate`.
+Deliver the verdict, evidence per gate, the highest-impact changes and the smallest falsifiable test of the prototype's core. Include a corrected **Inspiration** entry if enough source evidence exists. Keep this a concept assessment. Route a request to inspect a playable to `/voodoo-validate`.
 
 ## voodoo-create
 
 ### Create a game from an idea
 
-Intake options: ask which idea or pitch to take forward, which scope to deliver (full game plan, plan plus playable V0, or a scoped V1 build), and the target engine/device or production constraints. If the target is a plan, treat technology choices as plan decisions. Confirm when the brief already contains all inputs.
+Intake options include the chosen idea, target engine/device and required assets. A request to create the game includes a plan and one finished playable prototype. Honor an explicitly requested plan-only scope. Confirm any material decision that the brief leaves open.
 
-After intake, read [Puzzle design gates](#puzzle), [Levels, fairness and economy](#levels), [Mobile art and game feel](#art), and [Prototype, creative and test plan](#testing). Screen for blockers, identify evidence gaps and propose scoped fixes for the chosen concept. If a hard gate needs a fundamentally different concept, surface the decision before rewriting the premise.
+After intake, read [Puzzle design gates](#puzzle), [Levels, fairness and economy](#levels), [Mobile art and game feel](#art), and [Prototype acceptance and loss logging](#testing). Screen for blockers, identify evidence gaps and propose scoped fixes for the chosen concept. If a hard gate needs a fundamentally different concept, surface the decision before rewriting the premise.
 
 Deliver a full game plan with these sections.
 
 1. Concept, audience, one-line pitch and **Inspiration** with the new decision.
 2. Controls, core loop, board/state, action rules, legal and illegal feedback, win/loss and revive. Include a reproducible example with two different solutions and one recoverable error.
-3. L1–20 specifications with level personalities, fail-safe tutorials, hard/easy pairs and the loop back from L20 to about L6. Include seeded variation, a path to V2/L50 and 1,000-level QA, progression metrics and revive economy.
-4. Portrait gameplay and panel flow, including Win, Game Over and a Main Menu planned for a later version. Specify each panel's content, actions and destination. Include palette roles, board hierarchy, asset references, motion/audio/haptics and readability checks.
-5. First 3–5-second hook, sample win/lose states for the pitch, five CPI angles for V1, and where each ad moment appears in L1–3. Include instrumentation and playtest criteria.
-6. V0 → V1 → V2 deliverables, dependencies, scope decisions and acceptance checks. Order work by risk and prioritize touch, feedback and the core loop.
+3. L1–20 specifications with level personalities, restricted tutorial steps and animated hand cues, hard/easy pairs and the loop back from L20 to about L6. Include seeded variation and the revive economy.
+4. Portrait Main Menu, gameplay, Win and Game Over flow. Specify each panel's content, actions and destination. Include palette, asset references and particles, screen shake, sound and phone vibration per action.
+5. Objective-progress logging at each loss, the 900-coin revive behavior, and acceptance checks for the complete player flow. Exclude all ad code, stubs, SDKs, placements and ad-gated actions.
 
-If the agreed scope includes a build, follow the project's entry points and implement that playable scope. Use the existing stack, or a small self-contained HTML5 V0 when agreed and no stack is prescribed. Verify portrait behavior and the input → result panel → next level or retry/revive flow. For a complete V1, run the V1 checklist in the test reference. Hand over the runnable path, controls and verification gaps. A written plan is the deliverable when plan-only is selected.
+For a build, use the existing stack and its normal entry points. When an agreed browser build has no stack, use HTML5 and keep the playable viewport in portrait. Run the acceptance checklist, hand over a runnable path and identify remaining device checks. For a plan-only request, deliver the plan with the same acceptance criteria.
 
 ## voodoo-validate
 
 ### Validate a game or prototype
 
-Intake options: ask where the playable build, repository, gameplay clip or analytics can be inspected, what scope it claims (V0, V1 or V2), and which platform or acceptance decision matters. Ask for a test state or reproduction steps when relevant.
+Intake options include where to find the playable prototype, source, clip or loss logs, the target device, and which acceptance decision matters. Ask for a test state or reproduction steps when relevant.
 
-After intake, read [Puzzle design gates](#puzzle). Use [Levels, fairness and economy](#levels) for gameplay progression, [Mobile art and game feel](#art) for portrait layout and panels, and [Prototype, creative and test plan](#testing) for V1, ad or publisher readiness. Exercise the normal player path where possible. For a full review cover onboarding, deliberate decisions, replayed seeds, varied solutions, late losses and revive, portrait behavior and result panels, readability and game feel. Check the first 3–5 seconds of the ad and verify its gameplay appears in L1–3. When judging milestone readiness, run the V1 checklist where applicable. Keep focused audits within the requested levels and criteria. A video can demonstrate behavior it shows. Source code, a plan or one clip alone cannot establish device feel, retention, broad appeal or every level's solvability.
+After intake, read [Puzzle design gates](#puzzle). Use [Levels, fairness and economy](#levels) for progression, [Mobile art and game feel](#art) for portrait panels and feedback, and [Prototype acceptance and loss logging](#testing) for a full audit or loss evidence. Exercise the normal player path where possible. For a full audit, run the acceptance checklist and check decision depth and seeded replays. Keep focused audits within the requested levels and criteria. Use source and runtime evidence for input gating, economy, ad absence and log accuracy. A clip supports visible behavior. Confirm phone vibration on a supported phone or mark it unverified.
 
 Deliver one verdict with prioritized findings. For each include severity, gate, specific scene/level/seed/timecode/file/cohort, observed result, expected result and smallest useful fix or test. Identify missing evidence and provide a short reproducible retest. This workflow is read-only.
 
@@ -75,11 +74,11 @@ Deliver one verdict with prioritized findings. For each include severity, gate, 
 
 ### Update an existing puzzle game
 
-Intake options: ask for the current project or playable, claimed stage and big problems, any rules, assets, levels, saves or integrations to preserve, and whether the output is a prioritized change plan or implemented changes.
+Intake options include the current project or playable, the changes to make, rules or data to preserve, and whether to deliver a prioritized plan or implement it.
 
-After intake, read [Puzzle design gates](#puzzle). Use [Levels, fairness and economy](#levels) for progression, failure or revive changes, [Mobile art and game feel](#art) for portrait layout, panels or feedback, and [Prototype, creative and test plan](#testing) when creative, a full V1 update or testing is in scope. Trace the existing loop and reproduce the issues with available evidence. Rank gaps by the gate they block and by player impact. Propose the smallest update that restores the decision loop, clarity or fairness. Carry forward working project patterns and data compatibility. Show before/after behavior, acceptance checks and any migration required. If a fix would replace the core idea or violate a user constraint, ask about that tradeoff before applying it.
+After intake, read [Puzzle design gates](#puzzle). Use [Levels, fairness and economy](#levels) for progression, tutorial or revive changes, [Mobile art and game feel](#art) for portrait panels or feedback, and [Prototype acceptance and loss logging](#testing) for a full update or telemetry. Reproduce the issues with available evidence. Prioritize gaps by player impact and propose the smallest fix. Carry forward working project patterns and save compatibility. Show before/after behavior, acceptance checks and any required migration. If a fix changes the core idea or conflicts with a user constraint, ask about that tradeoff before applying it.
 
-For an agreed implementation, make targeted edits. Verify the relevant portrait screens and panel routes, fail-safe opening, level progression, revive/retry, replays and existing saves or level data. Preserve direct gameplay entry during V1 panel updates. Later versions can include the Main Menu. Use tests or recorded reproductions appropriate to the change. Deliver changes or patch references, what passed, what still needs device or player evidence, and how to retest. A plan-only request produces a prioritized patch plan with the same acceptance checks.
+For implementation, make targeted edits. A full update brings the existing game to one finished prototype using the acceptance checklist, including the Main Menu and result panels, restricted tutorials, action feedback, no in-game ads, coin revive and loss logging. For scoped edits, verify affected flows, replays and existing saves or level data. Deliver the updated playable or patch references, verification gaps and retest steps. A plan-only request produces a prioritized patch plan with acceptance checks.
 
 ## art
 
@@ -96,20 +95,21 @@ Use [Execution: Art, Gamefeel & Animations](https://app.notion.com/p/Execution-A
 
 #### Portrait layout and panels
 
-- Design gameplay, tutorial, result panels and any later menu for portrait only. Lock native builds to portrait and disable landscape autorotation. Where a web build cannot lock device orientation, keep the playable viewport in a centered portrait frame on wide screens. Check short and tall phones, safe areas and reachable primary controls.
-- Win panel. Present the result and earned coins once, with a clear Next Level action. Keep the celebration brief. Advance directly into the next board.
-- Game Over panel. From L4 onward, show the outcome, remaining goal and how close the player was. Present Retry and the eligible 900-coin revive with its exact grant. Make insufficient coins clear. Use the same visual system as gameplay and pause board input while a result panel is open.
-- Main Menu panel. Include it in a full game plan for a later version. Give Play or Continue clear priority and make it lead to the right level. V1 launches into gameplay and continues through the Win panel.
+- Design every screen for portrait. Lock native builds to portrait and disable landscape autorotation. Where a web build cannot lock device orientation, keep the playable viewport in a centered portrait frame on wide screens. Check short and tall phones, safe areas and reachable primary controls.
+- Main Menu. Open here on launch. Give Play a clear route to L1 for new players and Continue a route to the player's saved progression. Keep these controls distinct from the game board.
+- Win. Show the result and coins earned. Credit the reward once. Next Level advances directly into the next board, including the loop after L20. Keep the celebration brief.
+- Game Over. From L4 onward, show the progress reached and the remaining goal. Offer Retry and, when eligible, a 900-coin revive with its exact grant. Explain an insufficient balance. Keep board input blocked while a result panel is open.
+- Tutorial hand. Animate a point and tap pulse for taps, or trace the actual path for a drag or swipe. Anchor the hand to the current target in portrait layouts. Keep it clear of the main action and let touches pass through it. Update or hide it when the step completes or the player leaves the tutorial.
 
 #### Feedback spec
 
-For each critical event define cue, start/travel/settle, priority, audio/haptic and what the board communicates. Include select, move, place, illegal or blocked input, score or goal progress, combo or payoff, win, near-loss and revive.
+Specify particles, screen shake, sound and phone vibration for each discrete gameplay action. Include selection, move, placement, blocked input, goal progress, combos and result actions. Give each action a visible response and a short sound and haptic cue on supported devices. Scale particles and screen shake to the event. Blocked or small actions use subtle cues and larger successes earn stronger effects. Avoid retriggering cues on every frame of a hold or drag. Keep the board readable and respect mute, haptics and reduced-motion settings where available.
 
 1. Start visible response on touch. Match movement to the gesture, and give an invalid move a brief rejection cue.
 2. Give each success a readable payoff. Scale move, success and combo with distinct intensity. Repeated events should still feel satisfying.
 3. Let nearby objects or the environment respond when it reinforces cause and effect.
 4. Use contrast, highlights, depth and clear affordances to guide the next choice.
-5. Specify short input audio and differentiated haptics on supported devices, with stronger cues for important actions and a rising pitch for a streak. Check on a phone with audio and haptics enabled and muted.
+5. Use a rising pitch for streaks when it fits the game. Check that the sound and vibration patterns are distinct on a real phone.
 6. Reinforce each result with the corresponding panel, motion and audio cue.
 
 Animate purposeful starts, travel and stops with easing, selective overshoot and settling. Use brisk small moves and greater weight for larger events. Align particles with the action's direction and reward scale. Keep the next playable state visible and responsive. Inspect phone-size screenshots, grayscale and a frame-by-frame clip. Compare a raw iteration and a polished one with the same rules. Identify the top three gaps and prioritize the feedback the player experiences every move.
@@ -118,30 +118,29 @@ Animate purposeful starts, travel and stops with easing, selective overshoot and
 
 ### Levels, fairness and economy
 
-Sources [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS) (Level design, Targets), the user's brief and *Game Ideation Guide (1).pdf*, pp. 2 and 5. The example curve below is a playbook starting point. The brief and PDF's 20-level core-only requirement govern V1. Put the playbook's suggested feature introductions in V2. V1 can introduce examples of decisions and consequences already in the rules.
+Use the user's brief and *Game Ideation Guide (1).pdf*, pp. 2 and 5, for the 20-level core. Use the playbook for difficulty and economy examples. [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS)
 
 #### First 20 levels
 
-- L1 teaches one action with a guaranteed payoff. L2 demonstrates why order matters and delivers the signature payoff. L3 demonstrates failure pressure safely. L1–3 must always remain finishable. Test inefficient moves, depleted budgets, timeouts and blocked states. Use guidance, constrained choices or free recovery to keep the tutorial playable. L4 is the first level allowed to trigger Game Over. Check the opening levels with new players on a portrait phone.
+- L1 teaches one action with a guaranteed payoff. L2 demonstrates why order matters and delivers the signature payoff. L3 demonstrates failure pressure safely. For each step, define the allowed input and exact board targets, then show the required tap, drag or swipe with an animated hand. Enforce the restriction in game input as well as visually. Block off-target or out-of-step input before it changes the board, spends a move or advances the lesson. Advance the hand and lesson after the expected action resolves. Keep L1–3 finishable and shield them from terminal loss and forced restarts. L4 is the first level that can trigger Game Over.
 - Give each level a personality and a purpose. Use quick wins, memorable shapes, crowded boards, longer setups and very hard squeezes. Target difficulty peaks at L9, L14 and L19. Follow them with easy L10, L15 and L20. Tune layout, order, occupancy, piece count, target and budget within the same rules.
-- For each level specify ID, personality, learning or decision objective, layout/preset, starting quantities, goal, fail budget, difficulty and replay check. Map ad moments to L1–3. For representative boards include reproducible configurations with two distinct winning paths. After the L20 Win panel, go straight into a validated non-tutorial board around L6, using L6 by default. Keep the player's economy and validate the repeated sequence and seeded variants. The loop reuses authored boards.
+- For each level specify ID, personality, learning or decision objective, layout/preset, starting quantities, goal, fail budget, difficulty and replay check. Map gameplay from any requested promo to L1–3. For representative boards include reproducible configurations with two distinct winning paths. After the L20 Win panel, proceed to a validated non-tutorial board around L6, using L6 by default. Keep the player's economy and validate the repeated sequence and seeded variants.
 
 #### Retry variation and validation
 
 - Vary at least one meaningful opening choice per retry where compatible with tutorial clarity. Use seeded, bounded permutations or a curated pool, with visible changes and deterministic resolution. Log level ID, seed and actions. Generate only from allowed ranges and use known-good fallbacks. Prove each shipping variant has meaningful solutions and a fair difficulty band via solver, replay or curated QA. A global color rename alone is cosmetic unless it changes decisions.
-- For depth, show how board families, dimensions, targets and budgets combine within validated bounds and screen out duplicates, unsolvable variants, one-path boards and difficulty outliers. Explain how this workflow can reach 50 authored levels and credibly scale toward 1,000.
+- For depth, show how board families, dimensions, targets and budgets combine within validated bounds and screen out duplicates, unsolvable variants, one-path boards and difficulty outliers.
 - Define `loss_progress` using an observable goal fraction or puzzle-specific progress proxy. Target a majority of failures at or above 80% progress. Track early deadlocks, progress by difficulty and whether the continue can finish the attempt. Move burn alone can overstate progress. Use deterministic replay sweeps for the board logic and playtests to learn when players would continue instead of restarting.
 
-#### Economy for publisher-style prototypes
+#### Economy
 
-- Playbook V1 defaults are 1,000 starting coins and +50 per win. A revive costs 900 coins and adds +5 moves in a moves-based level or +30 seconds in a timed level. Offer it from Game Over when it can restore a playable attempt. Show the price and grant up front. Charge once on acceptance, keep the current board and objective progress, and return the player to that level. Verify Retry and the insufficient-coins state.
-- Playbook V2 targets 50 complete levels after a good D1 signal. Introduce one feature at a time with its own forgiving teaching level. Playbook defaults include three boosters at 600 coins each and roughly 1.4 ads per session. Treat these as test settings for that publishing context. Specify revive and reward behavior on retries or repeated actions when implementation is requested.
+- Start at 1,000 coins and award +50 per win as playbook defaults. Revive costs 900 coins and adds +5 moves in a moves-based level or +30 seconds in a timed level. Offer it from Game Over when the grant restores a playable attempt. Show the price and grant up front. Charge once on acceptance, retain the current board and objective progress, and return the player to that level. Retry starts the level over without a revive charge. Keep Retry available when the balance is under 900 coins. The revive uses coins only.
 
 ## puzzle
 
 ### Puzzle design gates
 
-Apply the user's explicit brief and *Game Ideation Guide (1).pdf*, pp. 1–5, to the idea and mechanics. Use the [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS) for execution and publishing-test guidance. Its calendar, status section and team logistics are outside scope. For art and game feel use the [Execution guide](https://app.notion.com/p/Execution-Art-Gamefeel-Animations-bc6fe94c74608317a6e001042f76d2bb). The paint-and-pixel concept in the brief illustrates pitch sections. Its timer, mechanics, audience details and boosters belong to that example.
+Apply the user's prototype brief and the design criteria in *Game Ideation Guide (1).pdf*, pp. 1–5. Use the playbook's level-design guidance and the execution guide's art and feedback examples. The paint-and-pixel concept illustrates pitch sections. [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS) · [Execution guide](https://app.notion.com/p/Execution-Art-Gamefeel-Animations-bc6fe94c74608317a6e001042f76d2bb)
 
 #### Inspiration and differentiation
 
@@ -158,33 +157,33 @@ Apply the user's explicit brief and *Game Ideation Guide (1).pdf*, pp. 1–5, to
 
 #### Progression and hook
 
-- Levels 1–3 are tutorials that every player can finish. The first possible loss is L4. Map every gameplay action, mechanic, board interaction and payoff shown in the ad to a playable moment in L1–3. Teach failure cues with a recoverable situation. Recut footage that promises something the tutorials cannot deliver.
+- Levels 1–3 are fail-safe tutorials. Restrict each step to its intended moves and use an animated hand to show the target and gesture. The first possible loss is L4. Teach failure cues with a recoverable situation. If a promotional clip is requested, map its gameplay moments to playable moments in L1–3.
 - Keep early play forgiving and design most losses to land in the last fifth of meaningful progress, when a continue is worth more to the player than restarting. Give levels distinct personalities, with very hard peaks around L9, L14 and L19 and an easy level after each.
-- Design the game in portrait at every stage. V1 launches directly into 20 levels on one ruleset and uses dedicated Win and Game Over panels. V1 excludes new features, boosters, menus, shops and stars. Loop from L20 back to about L6. A full game plan includes the Main Menu for a later scope. Plan 50 complete levels for V2 and explain how a bounded level grammar and QA could support 1,000. Add small, seeded variations that protect solvability and difficulty under retries.
-- Marketability gate. In the first 3–5 seconds of raw footage, show a distinctive player action and its immediate outcome. Make the goal and failure pressure legible enough for a fresh viewer to infer how the player wins or loses. Show actual win and fail states in the pitch. Test the opening with fresh viewers. A storyboard is a hypothesis until viewers see an actual clip. The clip window measures comprehension and interest.
+- Define one finished, portrait-only playable prototype with a Main Menu, Win and Game Over panels, and 20 levels on one ruleset. Loop from L20 back to about L6. Exclude in-game ads, rewarded ads, ad SDKs, boosters, shops and stars. Use a 900-coin revive and record how close the player got before every loss. Add small, seeded variations that protect solvability and difficulty under retries.
+- Give each discrete gameplay action particles, screen shake, sound and phone vibration on supported devices. Scale the feedback to the action.
+- Legibility check. A fresh viewer should grasp a distinctive player action and its immediate outcome within 3–5 seconds of raw gameplay. Show stakes and payoff. If footage is requested, a storyboard is a hypothesis and fresh viewers can test the actual clip.
 
 #### Review outcome
 
-Give one verdict for the agreed scope: **Advance**, **Rework**, **Drop**, or **Evidence needed** when a decision requires critical evidence you lack. Use **Pass**, **Fail**, **Unverified** or **Out of scope** per check, with evidence and the smallest next test or fix. A failed gate prevents an unqualified Advance. Track applicable gates for originality, broad appeal, hook, visible conditions, flexible wins, agency, direct control, feedback, depth, portrait layout, result panels, ad coverage in L1–3, late loss/revive, V1/V2 scope, controlled randomness, 1,000-level plausibility and anti-patterns. Treat a missing V0 as a build milestone at idea stage and verify the AI-assisted web V0 when assessing completed prototype milestones.
+Give one verdict for the agreed scope: **Advance**, **Rework**, **Drop**, or **Evidence needed** when a decision requires critical evidence you lack. Use **Pass**, **Fail**, **Unverified** or **Out of scope** per check, with evidence and the smallest next test or fix. A failed gate prevents an unqualified Advance. Check applicable gates for inspiration, legibility, decisions, progress, 20-level depth, portrait panels, guided tutorials, feedback, late losses, revive and loss logging. At concept stage assess the proposed design. Require playable evidence before marking prototype behavior as verified.
 
 ## testing
 
-### Prototype, creative and test plan
+### Prototype acceptance and loss logging
 
-Source [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS) (AI workflow, Targets, CPI videos, Testing). Use the figures as playbook benchmarks for the relevant publisher test. Confirm current terms, platform requirements and test setup with the publisher if preparing a real submission.
+Plan and deliver one finished playable prototype in the selected engine. Use the project's normal entry point and a build or URL the user can run. Check the complete player flow and report any device behavior that still needs a real phone. The playbook provides suggested tests for comprehension and feel. [Puzzle Prototype Playbook](https://claude.ai/artifact/YMNU5BTiJHZVDWS6fJ6dRS)
 
-#### Prototype sequence
+#### Acceptance checks
 
-- Spec → plan → build. Record decisions in a short spec, map changes to the relevant project files and implement small verifiable slices. Start with an AI-assisted HTML5 V0 that demonstrates one complete loop, meaningful choices, the payoff and a visible failure/recovery state. V1 is the 20-level mobile test. Use the selected engine. The playbook uses Unity and an APK for the first Android playable. Verify real touch, portrait lock or portrait viewport on rotation, safe areas, multiple portrait aspect ratios, performance and device feedback. Plan V2 only after the agreed signal.
-- Instrument attempts, level starts and completion, tutorial steps, fails, progress at fail, seeds and revives offered/accepted/completed. Reproduce wins, recoverable mistakes, late losses, a revive and retry variation. Watch non-gamers interact with the first levels and separately test fresh viewers on ad footage. Where feasible compare solver/replay sweeps and human results. Bots measure state difficulty and solvability. Use humans to check comprehension and feel.
-- For V1, verify all 20 levels use the same rules. Check direct entry to gameplay, reachable Win and Game Over actions, fail-safe L1–3, and the first possible Game Over at L4. Replay L9→10, L14→15, L19→20 and L20→about L6. Check the 900-coin debit and exact move/time grant, preserved progress, Retry and insufficient coins. Confirm the main menu, shop, boosters and stars are absent from V1.
+- Launch into the Main Menu. Start a new game with Play and resume saved progression with Continue. Verify all screens fit portrait safe areas on short and tall phones. Check that rotating a device preserves portrait play.
+- For each step in L1–3, try off-target taps, drags, fast repeats and out-of-order actions. Confirm blocked input changes neither the board nor the move budget, the animated hand shows the current action and stops or moves at the right time, and the tutorial stays finishable. Exercise the first real loss in L4. Have new players try the tutorials on-device where possible.
+- Verify 20 authored levels, core rules, distinct level personalities, hard-to-easy transitions around L9–10, L14–15 and L19–20, and L20 looping to about L6. Replay representative winning paths, mistakes, seeds and retries.
+- Verify the Win panel, single coin reward and Next Level action. Confirm that Game Over blocks board input, displays the loss snapshot, offers Retry and handles 899 and 900 coins correctly. An accepted revive debits 900 once, adds exactly +5 moves or +30 seconds and preserves progress. A subsequent genuine loss generates a fresh record. Check that the prototype contains zero ad code, including disabled ad stubs, SDKs, placements and ad-gated actions.
+- On a phone, check particles, brief screen shake, sound and vibration for small actions, blocked inputs and larger payoffs. Inspect the board after feedback and during repeated input. Record phone vibration as unverified if only desktop evidence is available.
+- For any requested promotional footage, validate the opening in 3–5 seconds and show where its gameplay appears in L1–3. Keep footage outside the playable build.
 
-#### Creative test
+#### Loss event
 
-- Design the first five seconds in three beats. Opening frame shows the puzzle already in a readable state. Show a gesture and immediate consequence by about 3 seconds. By about 5 seconds reveal stakes or payoff. Then show the result. Use raw gameplay and clear, universal framing. With no explanation, ask fresh viewers what the player did, what changed and what they think success or failure looks like. Capture answers and the timestamp at which the rule clicked.
-- For the V1 CPI package, plan five distinct cuts using footage the tutorials can deliver. Try a quick combo, a board-wide reaction, a recoverable near-loss, a satisfying win, and one mechanic-specific angle. Log where each ad moment is playable in L1–3. Use a recoverable cue to show failure pressure. Recut any footage requiring an actual Game Over, a later mechanic or a board interaction missing from the tutorials. The playbook's 4:5 export is a crop of portrait gameplay. Check that the action and result stay readable. Aim for 20–30 seconds at 60 FPS with a clear hand overlay and minimal HUD. Record actual outcomes.
+Choose a progress metric that represents the objective, such as collected items divided by the target. Normalize it to a fraction from 0 to 1. For a puzzle with no countable goal, define a board-specific progress measure before implementing logging. Move or time consumption can explain the cause and should be recorded separately from objective progress.
 
-#### Reading the signals
-
-- Gate order in the playbook is CPI, then D1 retention, then D7 retention. Review weak CPI against the footage and concept before investing in V2. D1 target is 45% with 40% as minimum and D7 target is 20% with V2 content. The playbook's launch benchmarks include CPI at or below $2, D7 above 20% and 30 minutes of daily play. D30 of 20% is a long-term aspiration. Keep these distinct from actual outcomes and record cohort, market, platform and date. For playbook-style retention analysis look at US cohorts, onboarding and level funnels, difficulty, churn and revive behavior.
-- For a requested submission plan, check the current publishing guide and the selected test market/store. The playbook calls for a store video, a build under 100 MB and five CPI cuts. Give a handoff with build link, Inspiration entry, core action, win/fail/revive and test evidence. A review, pitch or plan carries no authority to publish or submit anything.
+On every genuine transition to loss, capture objective progress before showing Game Over or changing the board. Write one `level_lost` event with a unique loss ID, level ID, attempt ID, seed when applicable, loss cause, completed and required objectives or the progress proxy, `loss_progress`, and the relevant moves or time left. Reuse the snapshot in Game Over to tell the player how close they got. Use an inspectable local log or the project's existing instrumentation. Verify that redraws and repeated button taps produce no duplicates. Record a new loss ID if the player revives and genuinely loses again. Review the share of failures at or above 80% objective progress and tune earlier failures where feasible.
